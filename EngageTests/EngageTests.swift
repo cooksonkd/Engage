@@ -10,13 +10,20 @@ import XCTest
 @testable import Engage
 
 class EngageTests: XCTestCase {
+    let article = Article(source: nil, author: nil, title: nil, description: nil, urlToImage: nil, publishedAt: "2019-07-24T06:50:00Z", content: nil)
+    var articleListItemViewModel: ArticleListItemViewModel?
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.articleListItemViewModel = ArticleListItemViewModel(article: article)
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testFormattedDate(){
+        print("\(self.articleListItemViewModel?.formatDate(dateString: article.publishedAt))")
     }
 
     func testExample() {

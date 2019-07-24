@@ -15,6 +15,15 @@
 		26019DF822E75B6D007D7294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26019DF622E75B6D007D7294 /* LaunchScreen.storyboard */; };
 		26019E0322E75B6D007D7294 /* EngageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26019E0222E75B6D007D7294 /* EngageTests.swift */; };
 		26019E0E22E75B6D007D7294 /* EngageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26019E0D22E75B6D007D7294 /* EngageUITests.swift */; };
+		26DA0BAF22E84A7400C066BC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BAE22E84A7400C066BC /* NetworkConstants.swift */; };
+		26DA0BB422E85B2600C066BC /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BB322E85B2600C066BC /* APIResponse.swift */; };
+		26DA0BB622E85B8C00C066BC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BB522E85B8C00C066BC /* Article.swift */; };
+		26DA0BB822E85BF700C066BC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BB722E85BF700C066BC /* Source.swift */; };
+		26DA0BBA22E85C8E00C066BC /* ArticleListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BB922E85C8E00C066BC /* ArticleListItemViewModel.swift */; };
+		26DA0BBE22E8747F00C066BC /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BBD22E8747F00C066BC /* ArticleTableViewCell.swift */; };
+		26DA0BC122E87DBF00C066BC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BC022E87DBF00C066BC /* DataManager.swift */; };
+		26DA0BC322E881C000C066BC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BC222E881C000C066BC /* DataService.swift */; };
+		26DA0BC622E8A39E00C066BC /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DA0BC522E8A39E00C066BC /* NewsAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		26019E0922E75B6D007D7294 /* EngageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26019E0D22E75B6D007D7294 /* EngageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageUITests.swift; sourceTree = "<group>"; };
 		26019E0F22E75B6D007D7294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26DA0BAE22E84A7400C066BC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		26DA0BB322E85B2600C066BC /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		26DA0BB522E85B8C00C066BC /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		26DA0BB722E85BF700C066BC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		26DA0BB922E85C8E00C066BC /* ArticleListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItemViewModel.swift; sourceTree = "<group>"; };
+		26DA0BBD22E8747F00C066BC /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		26DA0BC022E87DBF00C066BC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		26DA0BC222E881C000C066BC /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		26DA0BC522E8A39E00C066BC /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +117,11 @@
 		26019DE922E75B64007D7294 /* Engage */ = {
 			isa = PBXGroup;
 			children = (
-				26019DEA22E75B64007D7294 /* AppDelegate.swift */,
-				26019DEC22E75B64007D7294 /* ViewController.swift */,
-				26019DEE22E75B64007D7294 /* Main.storyboard */,
-				26019DF422E75B6D007D7294 /* Assets.xcassets */,
-				26019DF622E75B6D007D7294 /* LaunchScreen.storyboard */,
+				26DA0BBF22E87DA200C066BC /* Services */,
+				26DA0BB222E85AF300C066BC /* Constants */,
+				26DA0BB122E85AD700C066BC /* Controller */,
+				26DA0BB022E85ACD00C066BC /* Model */,
+				26019E1B22E75BD3007D7294 /* View */,
 				26019DF922E75B6D007D7294 /* Info.plist */,
 				26019DF122E75B64007D7294 /* Engage.xcdatamodeld */,
 			);
@@ -126,6 +144,63 @@
 				26019E0F22E75B6D007D7294 /* Info.plist */,
 			);
 			path = EngageUITests;
+			sourceTree = "<group>";
+		};
+		26019E1B22E75BD3007D7294 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26DA0BC422E8900D00C066BC /* Cells */,
+				26019DEE22E75B64007D7294 /* Main.storyboard */,
+				26019DF622E75B6D007D7294 /* LaunchScreen.storyboard */,
+				26019DF422E75B6D007D7294 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26DA0BB022E85ACD00C066BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26DA0BB322E85B2600C066BC /* APIResponse.swift */,
+				26DA0BB522E85B8C00C066BC /* Article.swift */,
+				26DA0BB722E85BF700C066BC /* Source.swift */,
+				26DA0BB922E85C8E00C066BC /* ArticleListItemViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26DA0BB122E85AD700C066BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26019DEA22E75B64007D7294 /* AppDelegate.swift */,
+				26019DEC22E75B64007D7294 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26DA0BB222E85AF300C066BC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				26DA0BAE22E84A7400C066BC /* NetworkConstants.swift */,
+				26DA0BC522E8A39E00C066BC /* NewsAPI.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		26DA0BBF22E87DA200C066BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				26DA0BC022E87DBF00C066BC /* DataManager.swift */,
+				26DA0BC222E881C000C066BC /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		26DA0BC422E8900D00C066BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				26DA0BBD22E8747F00C066BC /* ArticleTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +334,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DA0BAF22E84A7400C066BC /* NetworkConstants.swift in Sources */,
+				26DA0BC122E87DBF00C066BC /* DataManager.swift in Sources */,
+				26DA0BBE22E8747F00C066BC /* ArticleTableViewCell.swift in Sources */,
 				26019DED22E75B64007D7294 /* ViewController.swift in Sources */,
+				26DA0BB622E85B8C00C066BC /* Article.swift in Sources */,
+				26DA0BC322E881C000C066BC /* DataService.swift in Sources */,
+				26DA0BB822E85BF700C066BC /* Source.swift in Sources */,
+				26DA0BBA22E85C8E00C066BC /* ArticleListItemViewModel.swift in Sources */,
 				26019DEB22E75B64007D7294 /* AppDelegate.swift in Sources */,
+				26DA0BB422E85B2600C066BC /* APIResponse.swift in Sources */,
 				26019DF322E75B64007D7294 /* Engage.xcdatamodeld in Sources */,
+				26DA0BC622E8A39E00C066BC /* NewsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77QDD2BL7Y;
 				INFOPLIST_FILE = Engage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenancookson.Engage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,6 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77QDD2BL7Y;
 				INFOPLIST_FILE = Engage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,7 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenancookson.Engage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
