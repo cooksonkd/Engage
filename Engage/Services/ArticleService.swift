@@ -12,17 +12,16 @@ protocol ArticleTableViewDelegate {
     func setViewModels(with viewModels: [ArticleListItemViewModel])
 }
 
-class DataService {
+class ArticleService {
     var delegate: ArticleTableViewDelegate?
-    
-    let dataManager = DataManager.shared
-    
     var articleViewModelArray: [ArticleListItemViewModel]?
-    
-    func setViewModels() {
-        articleViewModelArray = dataManager.getArticleArray().compactMap(ArticleListItemViewModel.init)
-        if let viewModelArray = articleViewModelArray{
-            delegate?.setViewModels(with: viewModelArray)            
-        }
+    var parameterKey: NewsAPI.ParameterKey
+    var parameterValue: NewsAPI.Country
+
+    init(parameterKey: NewsAPI.ParameterKey, parameterValue: NewsAPI.Country) {
+        self.parameterKey = parameterKey
+        self.parameterValue = parameterValue
     }
+    
+    // TODO: Refactor TopHeadlinesViewController and move network requests to this file
 }

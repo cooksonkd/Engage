@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct APIResponse {
+struct APIResponse: Codable {
     let articles: [Article]
 }

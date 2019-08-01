@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Article {
+struct Article: Codable {
     let source: Source?
     let author,
         title,

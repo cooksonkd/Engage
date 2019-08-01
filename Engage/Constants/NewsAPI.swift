@@ -8,33 +8,30 @@
 
 import Foundation
 
+protocol ParameterValue { }
+
 struct NewsAPI {
     static let host = "newsapi.org"
     static let path = "/v2/top-headlines"
     static let scheme = "https"
+    static let apiKeyKey = "apiKey"
+    static let apiKeyValue = "0e18fe09898b4c638a04cb943c9d9d1e"
     
     enum ParameterKey: String {
         case country = "country"
-        case category = "category"
-        case sources = "sources"
-        case searchKeyword = "q"
-        case pageSize = "pageSize"
-        case page = "page"
-        case apiKey = "apiKey"
     }
     
-    enum Country: String {
+    enum Country: String, ParameterValue {
         case southAfrica = "za"
         case unitedStates = "us"
     }
     
-    enum Category: String {
-        case business = "business"
-        case entertainment = "entertainment"
-        case general = "general"
-        case health = "health"
-        case science = "science"
-        case sports = "sports"
-        case technology = "technology"
+    static func url(parameterKey: ParameterKey, parameterValue: Country) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = self.scheme
+        urlComponents.host = self.host
+        urlComponents.path = self.path
+        urlComponents.queryItems = [URLQueryItem(name: parameterKey.rawValue, value: parameterValue.rawValue), URLQueryItem(name: apiKeyKey, value: apiKeyValue)]
+        return urlComponents.url
     }
 }

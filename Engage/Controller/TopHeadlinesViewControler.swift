@@ -11,7 +11,7 @@ import UIKit
 class TopHeadlinesViewControler: UIViewController, ArticleTableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    let articleService = ArticleService()
+    let articleService = ArticleService(parameterKey: .country, parameterValue: .southAfrica)
     
     var listViewModelArray = [ArticleListItemViewModel]() {
         didSet {
